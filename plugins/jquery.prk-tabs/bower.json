@@ -1,0 +1,22 @@
+{
+  "name": "jquery.prk-tabs",
+  "private": true,
+  "version": "1.0.0",
+  "homepage": "http://www.praekelt.com",
+  "authors": [
+    "Praekelt"
+  ],
+  "description": "Progressively enhanced, WAI-ARIA compliant jQuery tab system.",
+  "main": "src/jquery.prk-tabs.js",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "tabs",
+    "progressively enhanced"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/praekelt/fed-toolbox/tree/develop/plugins/jquery.prk-tabs"
+  },
+  "license": "MIT"
+}

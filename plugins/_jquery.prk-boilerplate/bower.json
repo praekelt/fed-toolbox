@@ -1,16 +1,21 @@
 {
   "name": "jquery.prk-boilerplate",
+  "private": true,
   "version": "0.1.0",
   "homepage": "http://www.praekelt.com",
   "authors": [
     "Praekelt"
   ],
   "description": "A jQuery plugin boilerplate based on http://jqueryboilerplate.com/ for Praekelt.",
-  "main": "src/jquery.boilerplate.js",
+  "main": "src/jquery.prk-boilerplate.js",
   "keywords": [
     "jquery",
     "plugin",
     "boilerplate",
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praekelt/fed-toolbox/tree/develop/plugins/_jquery.prk-boilerplate"
+  },
   "license": "MIT"
 }

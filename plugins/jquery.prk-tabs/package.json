@@ -1,15 +1,15 @@
 {
-  "name": "jquery.prk-boilerplate",
-  "version": "0.1.0",
-  "description": "A jQuery plugin boilerplate based on http://jqueryboilerplate.com/ for Praekelt",
+  "name": "jquery.prk-tabs",
+  "version": "1.0.0",
+  "description": "Progressively enhanced, WAI-ARIA compliant jQuery tab system.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/praekelt/fed-toolbox/tree/develop/plugins/_jquery.prk-boilerplate"
+    "url": "git+https://github.com/praekelt/fed-toolbox.git"
   },
   "keywords": [
     "jquery",
     "plugin",
-    "boilerplate"
+    "progressively enhanced"
   ],
   "author": "Praekelt",
   "contributors": [
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/praekelt/fed-toolbox/issues"
   },
-  "homepage": "https://github.com/praekelt/fed-toolbox/blob/develop/plugins/_jquery.prk-boilerplate/README.md",
+  "homepage": "https://github.com/praekelt/fed-toolbox#readme",
   "devDependencies": {
     "del": "^1.2.0",
     "gulp": "^3.9.0",
