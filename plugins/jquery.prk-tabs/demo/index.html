@@ -65,7 +65,12 @@
 
 		<script>
                 $(function() {
-                    $('.tabs-example').prkTabs();
+                    $('.tabs-example').prkTabs({
+                        navClass: 'prk-tabs',
+                        tabClass: 'tab',
+                        panelClass: 'panel',
+                        activeClass: 'active'
+                    });
                 });
 		</script>
 	</body>

@@ -1,19 +1,63 @@
-#PRK Plugin Boilerplate
-This boilerplate is based directly off https://github.com/jquery-boilerplate/jquery-boilerplate
+#jquery.prk-tabs
+A progressively enhanced, WAI-ARIA compliant tab system for use in Praekelt projects. 
 
-It has been modified to utilise Gulp as the build system.
+This plugin does not include styles - just functionality.
 
-##Setup
-Once this folder is cloned or copied, you will need to run `npm install` to download Gulp's dependencies.
+##Demo
+You can see the tabs in action in the `demo/` folder.
 
+##Initialisation
+Grab `jquery.prk-tabs.min.js` from the `dist/` folder and instantiate it with `$('selector').prkTabs();`
 
-##Build Process
-The available commands are:
+###Plugin Options
+The default plugin options are:
+```
+$('selector').prkTabs({
+    navClass: 'prk-tabs',
+    tabClass: 'tab',
+    panelClass: 'panel',
+    activeClass: 'active'
+});
+```
 
-*`$ gulp js-dev` - Generates an uncompressed, unminified version of the script for development environments.
-*`$ gulp js-prod` - Generates a compressed, minified version of the script for production environments.
-*`$ gulp build` - Runs both `js-dev` and `js-prod` tasks.
-*`$ gulp clean` - This will delete all the files inside the `dist` folder. Keeps it nice and clean.
-*`$ gulp watch` - This will run the `build` task whenever a change is detected to one of the files in `src`.
+###Explicitly setting the active tab on load
+You can set which tab is active on load by adding the following data-attribute:
+```
+<nav class="tabs-example" data-active-panel="#panel2">
+```
 
-For the sake of simplicity, all you need to do is run `$ gulp watch`, but the other commands are available to you should you need to use them.
+##Example
+```
+<nav class="tabs-example" data-active-panel="#panel2">
+    <a href="#panel1" id="tab1">Tab 1</a>
+    <a href="#panel2" id="tab2">Tab 2</a>
+    <a href="#panel3" id="tab3">Tab 3</a>
+</nav>
+
+<article id="panel1">
+    <h1>Panel 1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu scelerisque eros.</p>
+</article>
+
+<article id="panel2">
+    <h1>Panel 2</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu scelerisque eros.</p>
+</article>
+
+<article id="panel3">
+    <h1>Panel 3</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu scelerisque eros.</p>
+</article>
+
+<script>
+        $(function() {
+            $('.tabs-example').prkTabs({
+                navClass: 'prk-tabs',
+                tabClass: 'tab',
+                panelClass: 'panel',
+                activeClass: 'active'
+            });
+        });
+</script>
+```
+
