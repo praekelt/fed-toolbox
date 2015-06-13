@@ -17,7 +17,7 @@ var gulp = require('gulp'),
         });
     });
 
-    gulp.task('js-prod', function() {
+    gulp.task('js-dev', function() {
         return gulp.src('src/**/*.js')
             .pipe(plumber())
             .pipe(jshint())
@@ -25,7 +25,7 @@ var gulp = require('gulp'),
             .pipe(gulp.dest('dist/'));
     });
 
-    gulp.task('js-min', function() {
+    gulp.task('js-prod', function() {
         return gulp.src('src/*.js')
             .pipe(plumber())
             .pipe(jshint())
@@ -38,6 +38,6 @@ var gulp = require('gulp'),
     });
 
     gulp.task('build', function() {
-        runsequence(['clean', 'js-prod', 'js-min']);
+        runsequence(['clean', 'js-dev', 'js-prod']);
     });
 
