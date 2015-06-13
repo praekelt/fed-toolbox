@@ -1,0 +1,37 @@
+{
+  "name": "jquery.prk-boilerplate",
+  "version": "0.1.0",
+  "description": "A jQuery plugin boilerplate based on http://jqueryboilerplate.com/ for Praekelt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praekelt/fed-toolbox.git"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "boilerplate"
+  ],
+  "author": "Praekelt",
+  "contributors": [
+    {
+      "name": "Chris Sergienko",
+      "email": "chris@praekelt.com",
+      "url": "https://github.com/CSergienko"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/praekelt/fed-toolbox/issues"
+  },
+  "homepage": "https://github.com/praekelt/fed-toolbox#readme",
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.11.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "run-sequence": "^1.1.0"
+  }
+}

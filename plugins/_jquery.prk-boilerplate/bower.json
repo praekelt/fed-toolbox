@@ -1,0 +1,16 @@
+{
+  "name": "jquery.prk-boilerplate",
+  "version": "0.1.0",
+  "homepage": "http://www.praekelt.com",
+  "authors": [
+    "Praekelt"
+  ],
+  "description": "A jQuery plugin boilerplate based on http://jqueryboilerplate.com/ for Praekelt.",
+  "main": "src/jquery.boilerplate.js",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "boilerplate",
+  ],
+  "license": "MIT"
+}
