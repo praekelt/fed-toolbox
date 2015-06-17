@@ -79,8 +79,8 @@
             initStates: function() {
 
                 // The initially active panel is either the first by default, or whatever ID is specified in the data-active-panel attribute.
-                var activePanel = $(this.element).data('active-panel') !== undefined ?
-                   $($(this.element).data('active-panel')) : $('#' + this.panels[0][0].id);
+                var activePanel = $(this.element).data('panel-active') !== undefined ?
+                   $($(this.element).data('panel-active')) : $('#' + this.panels[0][0].id);
                 // The intially active tab is ascertained by getting the active panel's area-labelledby attr value.   
                 var activeTab = $('#' + activePanel.attr('aria-labelledby'));
 
