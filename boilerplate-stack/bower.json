@@ -1,0 +1,32 @@
+{
+  "name": "boilerplate-stack",
+  "version": "0.0.0",
+  "homepage": "https://github.com/praekelt/fed-toolbox",
+  "authors": [
+    "CSergienko <chris@praekelt.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1",
+    "bourbon": "~4.2.3",
+    "normalize.scss": "~3.0.2+normalize.3.0.2"
+  },
+  "dependencies": {
+    "jquery-legacy": "jquery#1.11",
+    "jquery-modern": "jquery#3",
+    "requirejs": "~2.1.20",
+    "underscore": "~1.8.3",
+    "picturefill": "~2.3.1",
+    "webshim": "~1.15.8",
+    "lazysizes": "~1.1.4",
+    "respond": "~1.4.2"
+  }
+}
