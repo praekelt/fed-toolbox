@@ -5,3 +5,15 @@ Translated to interfaces, atoms are basic tags, such as form labels, inputs or b
 
 Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
 */
+
+@include basic {
+    p {
+        color: red;
+    }
+}
+
+@include enhanced {
+    p {
+        color: blue;
+    }
+}
