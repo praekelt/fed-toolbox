@@ -23,12 +23,12 @@ $('selector').prkTabs({
 ###Explicitly setting the active tab on load
 You can set which tab is active on load by adding the following data-attribute:
 ```
-<nav class="tabs-example" data-active-panel="#panel2">
+<nav class="tabs-example" data-panel-active="#panel2">
 ```
 
 ##Example
 ```
-<nav class="tabs-example" data-active-panel="#panel2">
+<nav class="tabs-example" data-panel-active="#panel2">
     <a href="#panel1" id="tab1">Tab 1</a>
     <a href="#panel2" id="tab2">Tab 2</a>
     <a href="#panel3" id="tab3">Tab 3</a>
