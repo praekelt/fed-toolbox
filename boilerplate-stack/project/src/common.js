@@ -1,3 +1,0 @@
-/*
-    RequireJS Configuration
- */

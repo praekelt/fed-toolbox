@@ -9,25 +9,28 @@ var paths = {
 
 
 /* DEPENDENCIES */
+// TODO: Get gulp-load-plugins to work with non-gulp npm packages for cleaner code.
 var gulp = require('gulp'),
     del = require('del'),
     runsequence = require('run-sequence'),
     pngquant = require('imagemin-pngquant'),
+    bower = require('main-bower-files'),
     plugins = require('gulp-load-plugins')({
         rename: {
             'gulp-ruby-sass': 'sass',
-            'gulp-minify-css': 'minify'
+            'gulp-minify-css': 'minify',
+            'gulp-bower-normalize': 'bowerNormalizer'
         }
     });
 
 
 /* ===================================== */
-/* WATCH */
+/* DEFAULT TASK */
 /* ===================================== */
 
     gulp.task('default',function() {
         console.log('Building the project into the dist folder.');
-        runsequence(['sass', 'requirejs', 'images', 'iconify']);
+        runsequence(['bower', 'sass', 'requirejs', 'images', 'iconify']);
     });
 
 /* ===================================== */
@@ -149,7 +152,27 @@ var gulp = require('gulp'),
         gulp.src([paths.src + 'app/**/*.js', paths.src + 'app/**/*.scss'])
             .pipe(plugins.plumber())
             .pipe(plugins.modernizr(compiledName))
-            .pipe(gulp.dest(paths.src + 'lib/'));
+            .pipe(gulp.dest(paths.src + 'libs/'));
+    });
+
+/* ===================================== */
+
+
+/* ===================================== */
+/* BOWER DEPENDENCIES */
+/* ===================================== */
+
+    gulp.task('bower', function() {
+
+        // TODO: Prevent modernizr-custom.js from being deleted.
+        del(paths.src + 'libs/*.js');
+
+        gulp.src(bower(), {base: './bower_components'})
+            .pipe(plugins.bowerNormalizer({bowerJson: './bower.json'}))
+            .pipe(gulp.dest(paths.src + 'libs'));
+
+        // Rebuild the custom Modernizr, since it gets deleted.
+        runsequence('modernizr');
     });
 
 /* ===================================== */

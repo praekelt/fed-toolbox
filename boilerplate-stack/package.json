@@ -6,6 +6,7 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-bless": "^3.0.1",
+    "gulp-bower-normalize": "^1.0.6",
     "gulp-changed": "^1.2.1",
     "gulp-concat": "^2.6.0",
     "gulp-copy": "0.0.2",
@@ -25,6 +26,7 @@
     "gulp-util": "^3.0.6",
     "gulp-webp": "^2.3.0",
     "imagemin-pngquant": "^4.1.2",
+    "main-bower-files": "^2.9.0",
     "run-sequence": "^1.1.2"
   }
 }
