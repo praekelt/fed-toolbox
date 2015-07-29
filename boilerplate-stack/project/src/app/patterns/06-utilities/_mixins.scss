@@ -1,0 +1,11 @@
+@mixin basic {
+    @if $enhanced == false {
+        @content;
+    }
+}
+
+@mixin enhanced {
+    @if $enhanced == true {
+        @content;
+    }
+}
