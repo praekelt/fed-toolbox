@@ -8,6 +8,8 @@
     "gulp-bless": "^3.0.1",
     "gulp-changed": "^1.2.1",
     "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-flatten": "^0.1.1",
     "gulp-iconify": "^0.3.2",
     "gulp-imagemin": "^2.3.0",
     "gulp-load-plugins": "^1.0.0-rc.1",

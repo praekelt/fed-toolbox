@@ -21,6 +21,17 @@ var gulp = require('gulp'),
     });
 
 
+/* ===================================== */
+/* WATCH */
+/* ===================================== */
+
+    gulp.task('default',function() {
+        console.log('Building the project into the dist folder.');
+        runsequence(['sass', 'requirejs', 'images', 'iconify']);
+    });
+
+/* ===================================== */
+
 
 /* ===================================== */
 /* WATCH */
@@ -30,6 +41,7 @@ var gulp = require('gulp'),
         gulp.watch(paths.src + 'app/**/*.scss', ['sass']);
         gulp.watch(paths.src + 'app/**/*.js', ['requirejs']);
         gulp.watch(paths.src + 'app/images/**/*.*', ['images']);
+        gulp.watch(paths.src + 'icons/*.svg', ['iconify']);
     });
 
 /* ===================================== */
@@ -66,7 +78,7 @@ var gulp = require('gulp'),
 /* ===================================== */
 
     gulp.task('requirejs', function() {
-        console.log('Optimize Require');
+        // TODO: Create task to generate optimised r.js code
     });
 
 /* ===================================== */
@@ -97,8 +109,26 @@ var gulp = require('gulp'),
 /* ICONIFY */
 /* ===================================== */
 
-    gulp.task('iconify',function() {
-        console.log('Generate icon library');
+    // NB: If this fails to run, and you are on OSX,
+    // try running this command:
+    // $ ulimit -S -n 2048
+    gulp.task('iconify', function() {
+
+        // Since we're copying the SVGs to the dist, they need to be cleaned.
+        del(paths.dist + 'icons/*.svg');
+
+        // Generate icon library
+        plugins.iconify({
+            src: paths.src + 'icons/*.svg',
+            pngOutput: paths.dist + 'icons/png',
+            cssOutput: paths.dist + 'css/iconify',
+            styleTemplate: paths.src + 'icons/_icon_gen.scss.mustache'
+        });
+
+        // Copy across the svgs from src to dist (since iconify does not do this itself)
+        gulp.src(paths.src + 'icons/*.svg')
+            .pipe(plugins.flatten())
+            .pipe(gulp.dest(paths.dist + 'icons'));
     });
 
 /* ===================================== */
