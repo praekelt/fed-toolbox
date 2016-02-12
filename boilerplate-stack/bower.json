@@ -1,42 +1,30 @@
 {
-    "name": "boilerplate-stack",
-    "version": "0.0.0",
-    "homepage": "https://github.com/praekelt/fed-toolbox",
-    "authors": [
-        "CSergienko <chris@praekelt.com>"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "devDependencies": {
-        "susy": "~2.2.5",
-        "breakpoint-sass": "~2.6.1",
-        "bourbon": "~4.2.3",
-        "normalize.scss": "~3.0.2"
-    },
-    "dependencies": {
-        "jquery-legacy": "jquery#1.11",
-        "jquery-modern": "jquery#3",
-        "requirejs": "~2.1.20",
-        "underscore": "~1.8.3",
-        "picturefill": "~2.3.1",
-        "webshim": "~1.15.8",
-        "lazysizes": "~1.1.4",
-        "respond": "~1.4.2"
-    },
-    "overrides": {
-        "normalizeMulti": [
-            {
-                "dependencies": ["jquery-legacy", "jquery-modern", "requirejs", "underscore", "picturefill", "webshim", "lazysizes", "respond"],
-                "normalize": {
-                    "js": ["*.js"]
-                }
-            }
-        ]
-    }
+  "name": "fed-boilerplate",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "CSergienko <chris@praekelt.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/praekelt/fed-toolbox",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "modular-scale": "^2.1.1",
+    "susy": "^2.2.12",
+    "bourbon": "^4.2.6",
+    "compass-breakpoint": "breakpoint-sass#^2.6.1",
+    "sassy-maps": "^0.4.0",
+    "saffron": "^0.2.3",
+    "neat": "^1.7.2",
+    "sanitize-css": "^3.2.0",
+    "html-inspector": "^0.8.2"
+  }
 }

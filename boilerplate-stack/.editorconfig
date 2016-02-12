@@ -1,0 +1,10 @@
+[*]
+; Set tab style
+indent_style = space
+tab_width = 4
+
+; Trim any trailing whitespace
+trim_trailing_whitespace = true
+
+; UTF-8 ALL the things!
+charset = utf-8
